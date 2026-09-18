@@ -1,96 +1,1123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Ildefonso Campos Loureiro Junior - Desenvolvedor FullStack em formação">
-    <title>Ildefonso Campos Loureiro Junior | Desenvolvedor FullStack</title>
-    
-    <!-- Font Awesome (ícones) -->
+    <meta name="description" content="Portfólio de Ildefonso Campos Loureiro Junior - Técnico em Informática e Desenvolvedor Full-Stack em formação">
+    <meta name="author" content="Ildefonso Campos Loureiro Junior">
+    <title>Ildefonso Campos Loureiro Junior | Portfólio</title>
+
+    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/script.js" defer></script>
 </head>
+
 <body>
-    <!-- CABEÇALHO -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre-mim">Sobre Mim</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contatos">Contato</a></li>
+    <!-- ======================================================
+         HEADER / NAVBAR
+    ======================================================= -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navegação principal">
+            <!-- HAMBURGER -->
+            <button id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- MENU -->
+            <ul id="main-menu" class="nav-menu">
+
+                <!-- HOME -->
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+
+                <!-- SOBRE MIM -->
+                <li class="nav-item">
+                    <a href="#sobre-mim" class="nav-link">Sobre Mim</a>
+                </li>
+
+                <!-- ==================================================
+                     PROJETOS
+                =================================================== -->
+
+                <li class="nav-item has-dropdown">
+                    <button type="button" class="nav-link dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+                        <span>Projetos</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div class="mega-menu projects-menu">
+                        <div class="mega-menu-intro">
+                            <div class="mega-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div>
+                                <h2>Projetos</h2>
+                                <p>
+                                    Alguns dos projetos que estou
+                                    desenvolvendo durante minha formação.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mega-menu-content">
+                            <a href="#" class="mega-card">
+                                <span class="mega-card-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </span>
+                                <span class="mega-card-text">
+                                    <strong>Portfólio</strong>
+                                    <small>Meu portfólio pessoal</small>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+                            </a>
+
+                            <a href="#" class="mega-card">
+                                <span class="mega-card-icon">
+                                    <i class="fas fa-file-lines"></i>
+                                </span>
+                                <span class="mega-card-text">
+                                    <strong>Currículo</strong>
+                                    <small>Currículo profissional</small>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+                            </a>
+                            <a href="#" class="mega-card">
+                                <span class="mega-card-icon">
+                                    <i class="fas fa-right-to-bracket"></i>
+                                </span>
+                                <span class="mega-card-text">
+                                    <strong>Tela Login</strong>
+                                    <small>Interface de autenticação</small>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+                            </a>
+                            <a href="#" class="mega-card">
+                                <span class="mega-card-icon">
+                                    <i class="fas fa-globe"></i>
+                                </span>
+                                <span class="mega-card-text">
+                                    <strong>Website</strong>
+                                    <small>Desenvolvimento web</small>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+                            </a>
+                            <a href="#" class="mega-card">
+                                <span class="mega-card-icon">
+                                    <i class="fas fa-screwdriver-wrench"></i>
+                                </span>
+                                <span class="mega-card-text">
+                                    <strong>Sistema OS</strong>
+                                    <small>Sistema de ordem de serviço</small>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+                            </a>
+                            <a href="#" class="mega-card">
+                                <span class="mega-card-icon">
+                                    <i class="fas fa-boxes-stacked"></i>
+                                </span>
+                                <span class="mega-card-text">
+                                    <strong>Sistema Estoque</strong>
+                                    <small>Controle de estoque</small>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+                            </a>
+                            <a href="#" class="mega-card">
+                                <span class="mega-card-icon">
+                                    <i class="fas fa-cart-shopping"></i>
+                                </span>
+                                <span class="mega-card-text">
+                                    <strong>Sistema Vendas</strong>
+                                    <small>Gestão de vendas</small>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- ==================================================
+                     CONTATO
+                =================================================== -->
+
+                <li class="nav-item has-dropdown">
+
+                    <button
+                        type="button"
+                        class="nav-link dropdown-trigger"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                    >
+
+                        <span>
+                            Contato
+                        </span>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </button>
+
+
+                    <div
+                        class="mega-menu contact-menu"
+                    >
+
+                        <div class="mega-menu-intro">
+
+                            <div class="mega-icon">
+
+                                <i class="fas fa-paper-plane"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Entre em contato
+                                </h2>
+
+                                <p>
+                                    Encontre meus canais de contato
+                                    e redes profissionais.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mega-menu-content">
+
+
+                            <!-- WHATSAPP -->
+
+                            <a
+                                href="https://wa.me/5511957058875"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="mega-card"
+                            >
+
+                                <span class="mega-card-icon whatsapp-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </span>
+
+                                <span class="mega-card-text">
+
+                                    <strong>
+                                        WhatsApp
+                                    </strong>
+
+                                    <small>
+                                        (11) 95705-8875
+                                    </small>
+
+                                </span>
+
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+
+                            </a>
+
+
+                            <!-- E-MAIL -->
+
+                            <a
+                                href="mailto:wiiil.hc@gmail.com"
+                                class="mega-card"
+                            >
+
+                                <span class="mega-card-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+
+                                <span class="mega-card-text">
+
+                                    <strong>
+                                        E-mail
+                                    </strong>
+
+                                    <small>
+                                        wiiil.hc@gmail.com
+                                    </small>
+
+                                </span>
+
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+
+                            </a>
+
+
+                            <!-- LINKEDIN -->
+
+                            <a
+                                href="https://www.linkedin.com/in/ildefonso-campos-loureiro-junior-2292a1102/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="mega-card"
+                            >
+
+                                <span class="mega-card-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </span>
+
+                                <span class="mega-card-text">
+
+                                    <strong>
+                                        LinkedIn
+                                    </strong>
+
+                                    <small>
+                                        Perfil profissional
+                                    </small>
+
+                                </span>
+
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+
+                            </a>
+
+
+                            <!-- GITHUB -->
+
+                            <a
+                                href="https://github.com/ildefonsoLoureiroJr"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="mega-card"
+                            >
+
+                                <span class="mega-card-icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+
+                                <span class="mega-card-text">
+
+                                    <strong>
+                                        GitHub
+                                    </strong>
+
+                                    <small>
+                                        Repositórios e projetos
+                                    </small>
+
+                                </span>
+
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+
+                            </a>
+
+
+                            <!-- INSTAGRAM -->
+
+                            <a
+                                href="https://www.instagram.com/ildefonsocamposloureiro/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="mega-card"
+                            >
+
+                                <span class="mega-card-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </span>
+
+                                <span class="mega-card-text">
+
+                                    <strong>
+                                        Instagram
+                                    </strong>
+
+                                    <small>
+                                        Perfil pessoal
+                                    </small>
+
+                                </span>
+
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+
+                            </a>
+
+
+                            <!-- FACEBOOK -->
+
+                            <a
+                                href="https://www.facebook.com/ildefonso.loureiro"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="mega-card"
+                            >
+
+                                <span class="mega-card-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+
+                                <span class="mega-card-text">
+
+                                    <strong>
+                                        Facebook
+                                    </strong>
+
+                                    <small>
+                                        Perfil pessoal
+                                    </small>
+
+                                </span>
+
+                                <i class="fas fa-arrow-up-right-from-square mega-arrow"></i>
+
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </li>
+
             </ul>
-        </nav>   
+
+
+            <!-- TEMA -->
+
+            <div class="nav-actions">
+
+                <button
+                    id="theme-toggle"
+                    type="button"
+                    aria-label="Ativar modo escuro"
+                    title="Alterar tema"
+                >
+
+                    <i class="fas fa-moon"></i>
+
+                </button>
+
+            </div>
+
+
+        </nav>
+
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL -->
+
+
+    <!-- ======================================================
+         CONTEÚDO
+    ======================================================= -->
+
     <main>
-        <!-- SEÇÃO HERO -->
-        <section id="home">
-        <img src="./images/ildefonso-3x4-3.png" alt="Foto de Ildefonso Campos Loureiro Junior">
-        <div class="hero-content">
-            <h1>Ildefonso Campos Loureiro Junior</h1>
-            <p class="subtitle">Atuando como Técnico em informática e estudando desenvolvimento Full-Stack.</p>
-            <p class="description">Buscando minha primeira oportunidade no mercado de desenvolvimento de sistemas e áreas correlacionadas.</p>
-        </div>
+
+
+        <!-- ==================================================
+             HERO
+        =================================================== -->
+
+        <section
+            id="home"
+            class="hero-section"
+        >
+
+            <div class="hero-container">
+
+
+                <!-- FOTO -->
+
+                <div class="hero-image-wrapper">
+
+                    <img
+                        src="./images/ildefonso-3x4-3.png"
+                        alt="Foto de Ildefonso Campos Loureiro Junior"
+                        class="hero-image"
+                    >
+
+                </div>
+
+
+                <!-- CONTEÚDO -->
+
+                <div class="hero-content">
+
+
+                    <span class="hero-label">
+                        Técnico em Informática · Desenvolvedor Full-Stack em formação
+                    </span>
+
+
+                    <h1>
+                        Ildefonso Campos
+                        <span>
+                            Loureiro Junior
+                        </span>
+                    </h1>
+
+
+                    <p class="hero-subtitle">
+                        Profissional de Tecnologia da Informação,
+                        direcionando minha carreira para o desenvolvimento
+                        de sistemas.
+                    </p>
+
+
+                    <p class="hero-description">
+                        Tenho experiência com manutenção de computadores,
+                        notebooks e atendimento Help Desk. Atualmente estou
+                        aprofundando meus conhecimentos em desenvolvimento
+                        Full-Stack e buscando minha primeira oportunidade
+                        profissional na área de desenvolvimento.
+                    </p>
+
+
+                    <!-- TECNOLOGIAS -->
+
+                    <div class="technology-list">
+
+                        <span>
+                            HTML
+                        </span>
+
+                        <span>
+                            CSS
+                        </span>
+
+                        <span>
+                            JavaScript
+                        </span>
+
+                        <span>
+                            Node.js
+                        </span>
+
+                        <span>
+                            Git
+                        </span>
+
+                        <span>
+                            SQL
+                        </span>
+
+                    </div>
+
+
+                    <!-- BOTÕES -->
+
+                    <div class="hero-buttons">
+
+
+                        <a
+                            href="#projetos"
+                            class="hero-button primary"
+                        >
+
+                            Ver projetos
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="#sobre-mim"
+                            class="hero-button secondary"
+                        >
+
+                            Sobre mim
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- SEÇÃO SOBRE -->
-        <section id="sobre-mim">
-            <h3>Sobre mim</h3>
-            <p><strong>Ildefonso Campos Loureiro Junior</strong></p>
-            <p>Meu nome é Ildefonso, tenho 39 anos, sou de São Paulo - Brasil, trabalho como técnico de informática fazendo manutenção em notebook, desktop, fazendo atendimento Help Desk. Sou formado em Ciência da Computação porém sem experiência na área, estou estudando para me especializar em Desenvolvimento de Sistema Full-Stack e ingressar na área de desenvolvimento de Sistemas.</p>
+
+
+        <!-- ==================================================
+             SOBRE MIM
+        =================================================== -->
+
+        <section
+            id="sobre-mim"
+            class="content-section about-section"
+        >
+
+            <div class="section-container">
+
+
+                <span class="section-label">
+                    Sobre mim
+                </span>
+
+
+                <h2>
+                    Minha trajetória na Tecnologia da Informação
+                </h2>
+
+
+                <p class="about-intro">
+
+                    Sou profissional da área de Tecnologia da Informação,
+                    com experiência em manutenção de computadores e notebooks
+                    e atendimento Help Desk.
+
+                </p>
+
+
+                <p>
+
+                    Sou formado em Ciência da Computação e atualmente estou
+                    direcionando minha carreira para o desenvolvimento de
+                    sistemas, aprofundando meus conhecimentos em
+                    desenvolvimento Full-Stack.
+
+                </p>
+
+
+                <p>
+
+                    Tenho interesse em transformar os conhecimentos adquiridos
+                    em projetos práticos, aprimorando continuamente minhas
+                    habilidades e buscando minha primeira oportunidade
+                    profissional na área de desenvolvimento de sistemas.
+
+                </p>
+
+
+                <!-- ==================================================
+                     CARDS
+                =================================================== -->
+
+                <div class="about-cards">
+
+
+                    <!-- FORMAÇÃO -->
+
+                    <div class="about-card">
+
+                        <div class="about-card-icon">
+
+                            <i class="fas fa-graduation-cap"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Formação
+                            </h3>
+
+                            <strong>
+                                Ciência da Computação
+                            </strong>
+
+                            <p>
+                                Formação acadêmica na área de tecnologia.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EXPERIÊNCIA -->
+
+                    <div class="about-card">
+
+                        <div class="about-card-icon">
+
+                            <i class="fas fa-computer"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Experiência
+                            </h3>
+
+                            <strong>
+                                Técnico em Informática
+                            </strong>
+
+                            <p>
+                                Manutenção, suporte técnico e Help Desk.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OBJETIVO -->
+
+                    <div class="about-card">
+
+                        <div class="about-card-icon">
+
+                            <i class="fas fa-rocket"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Objetivo
+                            </h3>
+
+                            <strong>
+                                Desenvolvimento Full-Stack
+                            </strong>
+
+                            <p>
+                                Especialização e entrada na área de desenvolvimento.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
         </section>
 
-        <!-- SEÇÃO PROJETOS -->
-        <section id="projetos">
-            <h3>Projetos</h3>
-            <ul>
-                <li><a href="#">Portfólio</a></li>
-                <li><a href="#">Currículo</a></li>
-                <li><a href="#">Tela Login</a></li>
-                <li><a href="#">Website</a></li>
-                <li><a href="#">Sistema OS</a></li>
-                <li><a href="#">Sistema Estoque</a></li>
-                <li><a href="#">Sistema Vendas</a></li>
-            </ul>
+
+
+        <!-- ==================================================
+             PROJETOS
+        =================================================== -->
+
+        <section
+            id="projetos"
+            class="content-section projects-section"
+        >
+
+            <div class="section-container">
+
+
+                <span class="section-label">
+                    Projetos
+                </span>
+
+
+                <h2>
+                    Projetos em desenvolvimento
+                </h2>
+
+
+                <p class="section-description">
+
+                    Alguns projetos utilizados para praticar e desenvolver
+                    minhas habilidades em programação.
+
+                </p>
+
+
+                <div class="project-grid">
+
+
+                    <a
+                        href="#"
+                        class="project-card"
+                    >
+
+                        <span class="project-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </span>
+
+                        <h3>
+                            Portfólio
+                        </h3>
+
+                        <p>
+                            Meu portfólio pessoal.
+                        </p>
+
+                        <span class="project-link">
+                            Ver projeto
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="project-card"
+                    >
+
+                        <span class="project-icon">
+                            <i class="fas fa-file-lines"></i>
+                        </span>
+
+                        <h3>
+                            Currículo
+                        </h3>
+
+                        <p>
+                            Currículo profissional.
+                        </p>
+
+                        <span class="project-link">
+                            Ver projeto
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="project-card"
+                    >
+
+                        <span class="project-icon">
+                            <i class="fas fa-right-to-bracket"></i>
+                        </span>
+
+                        <h3>
+                            Tela Login
+                        </h3>
+
+                        <p>
+                            Interface de autenticação.
+                        </p>
+
+                        <span class="project-link">
+                            Ver projeto
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="project-card"
+                    >
+
+                        <span class="project-icon">
+                            <i class="fas fa-globe"></i>
+                        </span>
+
+                        <h3>
+                            Website
+                        </h3>
+
+                        <p>
+                            Projeto de desenvolvimento web.
+                        </p>
+
+                        <span class="project-link">
+                            Ver projeto
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="project-card"
+                    >
+
+                        <span class="project-icon">
+                            <i class="fas fa-screwdriver-wrench"></i>
+                        </span>
+
+                        <h3>
+                            Sistema OS
+                        </h3>
+
+                        <p>
+                            Sistema de ordem de serviço.
+                        </p>
+
+                        <span class="project-link">
+                            Ver projeto
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="project-card"
+                    >
+
+                        <span class="project-icon">
+                            <i class="fas fa-boxes-stacked"></i>
+                        </span>
+
+                        <h3>
+                            Sistema Estoque
+                        </h3>
+
+                        <p>
+                            Controle de estoque.
+                        </p>
+
+                        <span class="project-link">
+                            Ver projeto
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="project-card"
+                    >
+
+                        <span class="project-icon">
+                            <i class="fas fa-cart-shopping"></i>
+                        </span>
+
+                        <h3>
+                            Sistema Vendas
+                        </h3>
+
+                        <p>
+                            Sistema de gestão de vendas.
+                        </p>
+
+                        <span class="project-link">
+                            Ver projeto
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- SEÇÃO CONTATO -->
-        <section id="contatos">
-    <h3>Contatos</h3>
-    <p>Telefone: <a href="tel:+5511957058875"><i class="fas fa-phone"></i> (11) 95705-8875</a></p>
-    <p>E-mail: <a href="mailto:wiiil.hc@gmail.com"><i class="fas fa-envelope"></i> wiiil.hc@gmail.com</a></p>
-    
-    <ul class="social-links">
-        <li>
-            <a href="https://www.facebook.com/ildefonso.loureiro" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-        </li>
-        <li>
-            <a href="https://www.instagram.com/ildefonsocamposloureiro/" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </li>
-        <li>
-            <a href="https://www.linkedin.com/in/ildefonso-campos-loureiro-junior-2292a1102/" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/ildefonsoLoureiroJr" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-        </li>
-    </ul>
-</section>
+
+
+        <!-- ==================================================
+             CONTATO
+        =================================================== -->
+
+        <section
+            id="contatos"
+            class="content-section contact-section"
+        >
+
+            <div class="section-container">
+
+
+                <span class="section-label">
+                    Contato
+                </span>
+
+
+                <h2>
+                    Vamos conversar?
+                </h2>
+
+
+                <p class="section-description">
+
+                    Entre em contato comigo através dos canais abaixo.
+
+                </p>
+
+
+                <div class="contact-main-grid">
+
+
+                    <!-- WHATSAPP -->
+
+                    <a
+                        href="https://wa.me/5511957058875"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-main-card"
+                    >
+
+                        <span class="contact-main-icon whatsapp-contact-icon">
+
+                            <i class="fab fa-whatsapp"></i>
+
+                        </span>
+
+                        <span>
+
+                            <small>
+                                WhatsApp
+                            </small>
+
+                            <strong>
+                                (11) 95705-8875
+                            </strong>
+
+                        </span>
+
+                    </a>
+
+
+                    <!-- E-MAIL -->
+
+                    <a
+                        href="mailto:wiiil.hc@gmail.com"
+                        class="contact-main-card"
+                    >
+
+                        <span class="contact-main-icon">
+
+                            <i class="fas fa-envelope"></i>
+
+                        </span>
+
+                        <span>
+
+                            <small>
+                                E-mail
+                            </small>
+
+                            <strong>
+                                wiiil.hc@gmail.com
+                            </strong>
+
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- REDES SOCIAIS -->
+
+                <ul class="social-links">
+
+
+                    <li class="social-icon facebook">
+
+                        <span class="tooltip">
+                            Facebook
+                        </span>
+
+                        <a
+                            href="https://www.facebook.com/ildefonso.loureiro"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                        >
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="social-icon instagram">
+
+                        <span class="tooltip">
+                            Instagram
+                        </span>
+
+                        <a
+                            href="https://www.instagram.com/ildefonsocamposloureiro/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                        >
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="social-icon linkedin">
+
+                        <span class="tooltip">
+                            LinkedIn
+                        </span>
+
+                        <a
+                            href="https://www.linkedin.com/in/ildefonso-campos-loureiro-junior-2292a1102/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                        >
+
+                            <i class="fab fa-linkedin-in"></i>
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="social-icon github">
+
+                        <span class="tooltip">
+                            GitHub
+                        </span>
+
+                        <a
+                            href="https://github.com/ildefonsoLoureiroJr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+
+                            <i class="fab fa-github"></i>
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+        </section>
+
+
     </main>
 
-    <!-- RODAPÉ -->
+
+
+    <!-- ======================================================
+         FOOTER
+    ======================================================= -->
+
     <footer>
-        <p>&copy; Desenvolvido por Ildefonso - 2026</p>
+
+        <div class="footer-container">
+
+            <span>
+                &copy; Desenvolvido por Ildefonso - 2026
+            </span>
+
+        </div>
+
     </footer>
+
+
 </body>
+
 </html>
